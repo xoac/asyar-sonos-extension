@@ -1,0 +1,23 @@
+{
+  "name": "io.github.xoac.sonos",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Control Sonos speakers from Asyar: play/pause, skip tracks and change the volume of your group over the local network.",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "check": "svelte-check --tsconfig ./tsconfig.json --fail-on-warnings",
+    "test": "vitest",
+    "test:run": "vitest run"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^5",
+    "asyar-sdk": "file:../tmp/asyar/asyar-sdk",
+    "svelte": "^5",
+    "svelte-check": "^4",
+    "typescript": "^5.0.0",
+    "vite": "^6.4.3",
+    "vitest": "^5.0.5"
+  }
+}

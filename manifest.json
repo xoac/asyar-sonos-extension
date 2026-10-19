@@ -1,0 +1,49 @@
+{
+  "id": "io.github.xoac.sonos",
+  "name": "Control Sonos",
+  "version": "0.1.0",
+  "description": "Control Sonos speakers from Asyar: play/pause, skip tracks and change the volume of your group over the local network. Requires a Sonos system.",
+  "author": "Sylwester Rąpała",
+  "icon": "🔊",
+  "type": "extension",
+  "asyarSdk": "^4.16.0",
+  "permissions": ["network", "network:lan", "preferences:write"],
+  "background": { "main": "dist/worker.js" },
+  "preferences": [
+    {
+      "name": "room",
+      "type": "textfield",
+      "title": "Hotkey room",
+      "required": false,
+      "placeholder": "Not set: first allowed speaker",
+      "description": "Sonos Play / Pause, Next Track and Previous Track control the group this room is in. Sonos Control Center sets it to the group you last used there."
+    }
+  ],
+  "commands": [
+    {
+      "id": "control-center",
+      "name": "Sonos Control Center",
+      "description": "Play, pause, skip and set the volume of every Sonos group, and allow your speakers",
+      "mode": "view",
+      "component": "ControlCenter"
+    },
+    {
+      "id": "play-pause",
+      "name": "Sonos Play / Pause",
+      "description": "Toggle playback of your Sonos group",
+      "mode": "background"
+    },
+    {
+      "id": "next-track",
+      "name": "Sonos Next Track",
+      "description": "Skip to the next track in the group",
+      "mode": "background"
+    },
+    {
+      "id": "previous-track",
+      "name": "Sonos Previous Track",
+      "description": "Go back to the previous track in the group",
+      "mode": "background"
+    }
+  ]
+}
