@@ -4,6 +4,8 @@ Control your [Sonos](https://www.sonos.com/) speakers from the [Asyar](https://g
 control center with every group, what it plays, play/pause, track buttons and a volume slider, plus play/pause and track
 commands for global hotkeys.
 
+![Sonos Control Center in Asyar: a paused group with its track, play and track buttons and a volume slider](docs/control-center.png)
+
 > **Requires an Asyar build with the `network:lan` permission** from
 > [Xoshbin/asyar#879](https://github.com/Xoshbin/asyar/pull/879) (tested at `05916c0`), which is not in a release yet. The
 > released launcher refuses every request to the speaker. Until then the extension is not in the Asyar Store; to try it,
